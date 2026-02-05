@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>MetaphorStar: Image Metaphor Understanding and Reasoning with End-to-End Visual Reinforcement Learning</title>
+    <link rel="icon" type="image/x-icon" href="./static/img/icons/favicon.ico"> <!-- Placeholder icon -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://metaphorstar.github.io/" />
+    <meta property="og:image" content="./assets/Teaser.png" />
+    <meta property="og:title" content="MetaphorStar: Image Metaphor Understanding and Reasoning with Visual RL" />
+    <meta property="og:description" content="MetaphorStar is the first end-to-end visual reinforcement learning framework for image implication understanding, achieving SOTA performance." />
+
+    <!-- Twitter -->
+    <meta name="twitter:url" content="https://metaphorstar.github.io/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="./assets/Teaser.png" />
+    <meta name="twitter:title" content="MetaphorStar: Image Metaphor Understanding and Reasoning with Visual RL" />
+    <meta name="twitter:description" content="MetaphorStar is the first end-to-end visual reinforcement learning framework for image implication understanding, achieving SOTA performance." />
+
+    <script src="./static/js/distill_template.v2.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3-collection.v1.min.js"></script>
+    <script src="https://rawgit.com/nstrayer/slid3r/master/dist/slid3r.js"></script>
+
+    <script defer="" src="./static/js/hider.js"></script>
+    <script src="./static/js/image_interact.js"></script>
+    <script src="./static/js/switch_videos.js"></script>
+
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script defer src="./static/js/medium-zoom.min.js"></script>
+    <script defer src="./static/js/zoom.js"></script>
+</head>
+<body>
+    <div class="header-wrapper">
+        <div class="header-container" id="header-container">
+            <div class="header-content">
+                <h1 style="margin-top: 0px">MetaphorStar</h1>
+                <h2>Image Metaphor Understanding and Reasoning with<br>
+                    End-to-End Visual Reinforcement Learning</h2>
+                
+                <p>
+                    <strong>MetaphorStar</strong> is the first end-to-end visual reinforcement learning (RL) framework specifically designed for image implication understanding.
+                </p>
+
+                <div class="icon-container">
+                    <div class="icon-item">
+                        <img src="./static/img/icons/visual.svg" alt="Visual RL Icon">
+                        <div><strong>First Visual RL Framework for Image Metaphors</strong>: Integrating Chain-of-Thought reasoning with Group Relative Policy Optimization (GRPO).</div>
+                    </div>
+                    <div class="icon-item">
+                        <img src="./static/img/icons/data.svg" alt="Dataset Icon">
+                        <div><strong>Large-Scale Dataset & Benchmark</strong>: TFQ-Data with 14k high-quality training samples + TFQ-Bench for rigorous evaluation.</div>
+                    </div>
+                    <div class="icon-item">
+                        <img src="./static/img/icons/eval.svg" alt="SOTA Icon">
+                        <div><strong>State-of-the-Art Performance</strong>: Outperforms GPT-4.1 and Claude-4.0-Sonnet on multiple benchmarks.</div>
+                    </div>
+                    <div class="icon-item">
+                        <img src="./static/img/icons/connector.svg" alt="Improvement Icon">
+                        <div><strong>82.6% Improvement</strong>: Massive accuracy gains on TFQ tasks compared to base models.</div>
+                    </div>
+                    <div class="icon-item">
+                        <img src="./static/img/icons/recipe.svg" alt="Reasoning Icon">
+                        <div><strong>Enhanced General Reasoning</strong>: Improves performance on general vision benchmarks (MMBench, MathVista, MMVet).</div>
+                    </div>
+                </div>
+
+                <div class="button-container">
+                    <a href="#" class="button paper-link" target="_blank">
+                        <!-- Paper Link Placeholder -->
+                        <span class="icon is-small">
+                            <i class="ai ai-arxiv"></i>
+                        </span>
+                        arXiv (Coming Soon)
+                    </a>
+                    <a href="https://github.com/MING-ZCH/MetaphorStar" class="button" target="_blank">
+                        <!-- Code Link Placeholder -->
+                        <span class="icon is-small">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span>Code</span>
+                    </a>
+                    <a href="https://huggingface.co/collections/MING-ZCH/metaphorstar" class="button" target="_blank">
+                        <span class="icon is-small">
+                            <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face logo" style="height: 1em;">
+                        </span>
+                        <span>Models</span>
+                    </a>
+                    <a href="https://huggingface.co/collections/MING-ZCH/metaphorstar" class="button" target="_blank">
+                        <span class="icon is-small">
+                            <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face logo" style="height: 1em;">
+                        </span>
+                        <span>TFQ-Data</span>
+                    </a>
+                    <a href="https://huggingface.co/collections/MING-ZCH/metaphorstar" class="button" target="_blank">
+                        <span class="icon is-small">
+                            <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face logo" style="height: 1em;">
+                        </span>
+                        <span>TFQ-Bench</span>
+                    </a>
+                </div>
+            </div>
+            <div class="header-image">
+                <img draggable="false" src="./assets/Teaser.png" alt="MetaphorStar Teaser" class="teaser-image" style="max-height: 400px; width: auto;">
+            </div>
+        </div>
+    </div>
+
+    <d-article>
+        <div class="byline">
+            <div class="byline-container">
+                <p>
+                    <a href="https://ming-zch.github.io/" class="author-link" target="_blank">Chenhao Zhang<sup>1,2</sup></a> &emsp;
+                    <a href="https://github.com/PaParaZz1" class="author-link" target="_blank">Yazhe Niu<sup>1,3</sup></a> &emsp;
+                    <a href="https://www.ee.cuhk.edu.hk/~hsli/" class="author-link" target="_blank">Hongsheng Li<sup>3</sup></a>
+                </p>
+                <p class="affiliation">
+                    <sup>1</sup>Shanghai AI Laboratory &emsp;
+                    <sup>2</sup>Huazhong University of Science and Technology <br>
+                    <sup>3</sup>The Chinese University of Hong Kong
+                </p>
+                <p class="affiliation" style="margin-top: 5px;">
+                    zhangchenhao@pjlab.org.cn &emsp; niuyazhe@pjlab.org.cn
+                </p>
+                <!-- <p style="text-align: center; font-size: 1.35em; color: red; font-weight: bold;">
+                    <a href="#" target="_blank">Conference Name (Year)</a>
+                </p> -->
+            </div>
+        </div>
+
+        <!-- News Section -->
+        <div class="sub-section">
+            <h3 class="text">🔥 News</h3>
+            <ul class="text">
+                <li><strong>[Jan. 2026]</strong>: Our code, TFQ-Data, TFQ-Bench, and MetaphorStar-Family models have been released!</li>
+            </ul>
+        </div>
+
+        <!-- Abstract/Intro -->
+        <p class="text abstract">
+            Metaphorical comprehension in images remains a critical challenge for AI systems. While Multimodal Large Language Models (MLLMs) excel at basic VQA, they struggle with nuanced cultural, emotional, and contextual implications. 
+            <br><br>
+            To address this, we propose <strong>MetaphorStar</strong>, the first end-to-end visual reinforcement learning (RL) framework for image implication tasks. Our framework introduces the <strong>TFQ (True-False Question)</strong> paradigm to convert subjective interpretations into verifiable binary judgments, enabling stable RL optimization.
+            Our open-source MetaphorStar family (3B, 7B, 32B), trained using <strong>TFQ-GRPO</strong>, achieves significant performance improvements and state-of-the-art results.
+        </p>
+
+        <!-- Navigation Icons -->
+        <div class="icon-row">
+            <a href="#motivation" class="icon-link">
+                <img src="./static/img/icons/visual.svg" alt="Motivation Icon" class="icon">
+                Motivation
+            </a>
+            <a href="#method" class="icon-link">
+                <img src="./static/img/icons/recipe.svg" alt="Method Icon" class="icon">
+                Method
+            </a>
+            <a href="#data" class="icon-link">
+                <img src="./static/img/icons/data.svg" alt="Data Icon" class="icon">
+                TFQ Data/Bench
+            </a>
+            <a href="#models" class="icon-link">
+                <img src="./static/img/icons/connector.svg" alt="Model Icon" class="icon">
+                Models
+            </a>
+            <a href="#experiments" class="icon-link">
+                <img src="./static/img/icons/eval.svg" alt="Experiments Icon" class="icon">
+                Experiments
+            </a>
+        </div>
+        <p class="click-hint" style="width: 85%;">
+            <img src="./static/img/icons/click.gif" style="width: 1.5rem">
+            <strong>Click to jump to each section.</strong>
+        </p>
+        <hr>
+
+        <!-- Motivation Section -->
+        <div id="motivation" class="sub-section">
+            <h1 class="text">Motivation</h1>
+            <p class="text">
+                Understanding visual metaphors requires complex cognitive chains: 
+                <code>Visual Elements → Symbolic Recognition → Metaphorical Mapping → Cultural Context → Deep Implication</code>.
+                Standard Supervised Fine-Tuning (SFT) is insufficient for teaching this process.
+            </p>
+            <p class="text">
+                We leverage <strong>Reinforcement Learning (RL)</strong> to optimize the reasoning process itself. However, applying RL to subjective visual interpretation is challenging due to the lack of "ground truth".
+                We solve this with the <strong>True-False Question (TFQ) Paradigm</strong>:
+            </p>
+            <ul class="text">
+                <li><strong>Binary Verifiability</strong>: Converting subjective interpretations into verifiable True/False judgments.</li>
+                <li><strong>Deterministic Rewards</strong>: Clear reward signals ($r=1$ for correct, $r=0$ for incorrect).</li>
+                <li><strong>Forced Reasoning</strong>: Requiring explicit Chain-of-Thought (CoT) reasoning within <code>&lt;think&gt;...&lt;/think&gt;</code> tags.</li>
+            </ul>
+        </div>
+
+        <!-- Method Section -->
+        <div id="method" class="sub-section">
+            <h1 class="text">Method: TFQ-GRPO</h1>
+            <p class="text">
+                <strong>TFQ-GRPO</strong> (Group Relative Policy Optimization for True-False Questions) is our specialized visual RL algorithm.
+            </p>
+            <p class="text">
+                <strong>1. Structured Output Format</strong>: We enforce a strict structure separating reasoning from judgment:
+                <br>
+                <code>&lt;think&gt; [reasoning] &lt;/think&gt; &lt;answer&gt; [True/False] &lt;/answer&gt;</code>
+            </p>
+            <p class="text">
+                <strong>2. Multi-Component Reward Function</strong>:
+                $$R_{\text{total}} = R_{\text{accuracy}} + \lambda_{\text{format}} \cdot R_{\text{format}}$$
+                Correctness is rewarded based on the binary answer, while format rewards ensure structural compliance.
+            </p>
+            <p class="text">
+                <strong>3. Group Relative Optimization</strong>: We sample $K$ diverse outputs for each question and optimize the policy based on the relative advantage of each output compared to the group average.
+            </p>
+        </div>
+
+        <!-- Data Section -->
+        <div id="data" class="sub-section">
+            <h1 class="text">TFQ-Data & TFQ-Bench</h1>
+            <p class="text">
+                We construct a large-scale dataset leveraging high-quality metaphorical images.
+            </p>
+            <d-figure id="fig-data-bench">
+                <figure>
+                    <img data-zoomable="" draggable="false" src="./assets/TFQ_Data_Bench.png" alt="TFQ Data and Bench">
+                    <figcaption>
+                        <strong>Figure 1:</strong> Overview of TFQ-Data and TFQ-Bench splits. TFQ-Data-Full contains ~14k questions for training, while TFQ-Bench provides rigorous evaluation sets strictly disjoint from training data.
+                    </figcaption>
+                </figure>
+            </d-figure>
+            <p class="text">
+                <strong>TFQ-Data (Training)</strong>:
+                <ul>
+                    <li><strong>TFQ-Data-Full</strong>: 1,384 images, 13,607 questions.</li>
+                    <li><strong>TFQ-Data-Lite</strong>: 100 images, 984 questions (curated).</li>
+                </ul>
+                <strong>TFQ-Bench (Evaluation)</strong>:
+                <ul>
+                    <li><strong>TFQ-Bench-Full</strong>: 1,434 images, 14,099 questions.</li>
+                    <li><strong>TFQ-Bench-Lite</strong>: 50 images, 492 questions.</li>
+                </ul>
+            </p>
+        </div>
+
+        <!-- Models Section -->
+        <div id="models" class="sub-section">
+            <h1 class="text">MetaphorStar Model Family</h1>
+            <p class="text">We release models of various sizes, all trained with TFQ-GRPO.</p>
+            <table style="width:100%; border-collapse: collapse; margin: 20px 0; font-family: sans-serif;">
+                <thead style="background-color: #f2f2f2;">
+                    <tr>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Model</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Base Model</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Size</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;"><strong>MetaphorStar-3B</strong></td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Qwen2.5-VL-3B</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">3B</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://huggingface.co/MING-ZCH/MetaphorStar-3B">HuggingFace</a></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;"><strong>MetaphorStar-7B</strong></td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Qwen2.5-VL-7B</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">7B</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://huggingface.co/MING-ZCH/MetaphorStar-7B">HuggingFace</a></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;"><strong>MetaphorStar-32B</strong></td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Qwen2.5-VL-32B</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">32B</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://huggingface.co/MING-ZCH/MetaphorStar-32B">HuggingFace</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Experiments Section -->
+        <div id="experiments" class="sub-section">
+            <h1 class="text">Experiments & Results</h1>
+            
+            <h3 class="text">Main Results on Metaphor Benchmarks</h3>
+            <p class="text">
+                MetaphorStar achieves state-of-the-art results on TFQ, Multiple-Choice (MCQ), and Open-Style (OSQ) questions.
+            </p>
+            <d-figure id="fig-main-results">
+                <figure>
+                    <img data-zoomable="" draggable="false" src="./assets/Main_results.png" alt="Main Results">
+                    <figcaption>
+                        <strong>Figure 2:</strong> Main performance comparison. MetaphorStar-32B outperforms GPT-4.1 and Claude-4.0-Sonnet on several metrics.
+                    </figcaption>
+                </figure>
+            </d-figure>
+
+            <h3 class="text">General Visual Reasoning</h3>
+            <p class="text">
+                Learning image implication tasks improves general understanding capabilities. Our method shows gains on general benchmarks like MMBench, MathVista, and MMVet.
+            </p>
+            <d-figure id="fig-general-results">
+                <figure>
+                    <img data-zoomable="" draggable="false" src="./assets/General_results.png" alt="General Results">
+                    <figcaption>
+                        <strong>Figure 3:</strong> Performance on general vision benchmarks.
+                    </figcaption>
+                </figure>
+            </d-figure>
+            
+            <h3 class="text">Ablation Studies</h3>
+            <p class="text">
+                We analyze key factors contributing to MetaphorStar's success: Model Scaling, Data Scaling, Architecture, and Training Strategy.
+            </p>
+            
+            <h4 class="text">1. Model & Data Scaling</h4>
+            <div style="display: flex; justify-content: space-between;">
+                <d-figure style="flex: 1; margin-right: 10px;">
+                    <figure>
+                        <img data-zoomable="" draggable="false" src="./assets/Model_Scaling.png" alt="Model Scaling">
+                        <figcaption><strong>Figure 4:</strong> Model Parameter Scaling.</figcaption>
+                    </figure>
+                </d-figure>
+                <d-figure style="flex: 1; margin-left: 10px;">
+                    <figure>
+                        <img data-zoomable="" draggable="false" src="./assets/Data_Scaling.png" alt="Data Scaling">
+                        <figcaption><strong>Figure 5:</strong> Data Training Scaling.</figcaption>
+                    </figure>
+                </d-figure>
+            </div>
+
+            <h4 class="text">2. Different Model Architecture</h4>
+            <p class="text">
+                We validated our framework across LLaVA architectures. TFQ-GRPO proves to be model-agnostic, consistently improving the reasoning baseline of different backbones.
+            </p>
+            <d-figure id="fig-arch-study">
+                <figure>
+                    <img data-zoomable="" draggable="false" src="./assets/Different_Architecture.png" alt="Different Architecture">
+                    <figcaption><strong>Figure 6:</strong> Ablation on Different Model Architectures.</figcaption>
+                </figure>
+            </d-figure>
+
+            <h4 class="text">3. Different Training Strategy</h4>
+            <p class="text">
+                We compare three approaches: <strong>TFQ-SFT</strong> (SFT only), <strong>TFQ-SFT + TFQ-GRPO</strong> (SFT warmup + RL), and <strong>TFQ-GRPO</strong> (End-to-end RL).
+                <br>
+                Counterintuitively, <strong>SFT warmup actively harms performance</strong>. End-to-end RL (TFQ-GRPO) achieves best results on TFQ and MCQ. SFT-involving strategies cause catastrophic collapse on MCQ (46% → 28%), indicating severe generalization damage due to "SFT Curse" and entropy collapse.
+            </p>
+            <d-figure id="fig-train-strategy">
+                <figure>
+                    <img data-zoomable="" draggable="false" src="./assets/Different_Training_Strategy.png" alt="Different Training Strategy">
+                    <figcaption><strong>Figure 7:</strong> Comparison of Different Training Strategies.</figcaption>
+                </figure>
+            </d-figure>
+        </div>
+
+        <!-- Discussion Section -->
+        <div class="sub-section">
+            <h1 class="text">Discussion & Key Insights</h1>
+            <p class="text">
+                <strong>The "SFT Curse" in Visual Metaphor Reasoning</strong>
+            </p>
+            <p class="text">
+                Our analysis reveals a critical finding for reasoning-heavy visual tasks: <strong>SFT warmup is not only unnecessary but actively detrimental.</strong>
+            </p>
+            <ul class="text">
+                <li><strong>Entropy Collapse:</strong> Token entropy analysis shows that SFT causes severe entropy collapse (0.30) compared to the base model (1.33). This behavioral cloning traps the model in a narrow distribution, preventing it from exploring the broad solution space required for creative metaphor interpretation.</li>
+                <li><strong>"Talker" vs. "Thinker":</strong> SFT teaches the model to mimic the output format ("Talker") but fails to instill discriminative logic ("Thinker").</li>
+                <li><strong>Evaluation Bias:</strong> While SFT models may produce verbose outputs that bias LLM judges (inflating OSQ scores), they fail on objective discriminative benchmarks (TFQ/MCQ), indicating a illusion of competence.</li>
+            </ul>
+            <p class="text">
+                <strong>Conclusion:</strong> End-to-end RL (TFQ-GRPO) leverages high initial entropy for global optimization, proving superior for open-ended reasoning tasks.
+            </p>
+        </div>
+
+        <!-- Conclusion -->
+        <div id="conclusion" class="sub-section">
+            <h1 class="text">Conclusion</h1>
+            <p class="text">
+                To conclude, we present <strong>MetaphorStar</strong>, a pioneering framework that introduces visual reinforcement learning to the domain of image metaphor understanding. By establishing the TFQ paradigm and the TFQ-GRPO algorithm, we successfully bridge the gap between subjective visual interpretation and objective RL optimization.
+                <br><br>
+                Our release includes the MetaphorStar model family, the large-scale TFQ-Data, and the rigorous TFQ-Bench.
+                Crucially, our findings demonstrate that learning to reason about metaphors serves as a high-level cognitive workout, enhancing general visual reasoning capabilities. We hope our open-source contribution will inspire further research into reasoning-based visual learning and the cognitive depths of MLLMs.
+            </p>
+        </div>
+
+        <!-- Citation -->
+        <div class="sub-section">
+            <h1 class="text">Citation</h1>
+            <pre class="bibtex">
+@article{zhang2026metaphorstar,
+  title={MetaphorStar: Image Metaphor Understanding and Reasoning with End-to-End Visual Reinforcement Learning}, 
+  author={Chenhao Zhang, Yazhe Niu and Hongsheng Li},
+  journal={arXiv preprint arXiv:xxx},
+  year={2026}
+}
+            </pre>
+        </div>
+
+        <p style="text-align: center; font-size: small; color: gray; margin-top: 50px;">
+            This website is adapted from <a href="https://cambrian-mllm.github.io/" target="_blank">VISIONx @NYU</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+        </p>
+
+    </d-article>
+</body>
+</html>
