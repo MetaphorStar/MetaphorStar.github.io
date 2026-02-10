@@ -133,10 +133,10 @@
                 <p class="affiliation">
                     <sup>1</sup>Shanghai AI Laboratory &emsp;
                     <sup>2</sup>Huazhong University of Science and Technology <br>
-                    <sup>3</sup>The Chinese University of Hong Kong
+                    <sup>3</sup>The Chinese University of Hong Kong MMLab
                 </p>
                 <p class="affiliation" style="margin-top: 5px;">
-                    zhangchenhao@pjlab.org.cn &emsp; niuyazhe@pjlab.org.cn
+                    zhangchenhao@pjlab.org.cn &emsp; niuyazhe314@outlook.com
                 </p>
                 <!-- <p style="text-align: center; font-size: 1.35em; color: red; font-weight: bold;">
                     <a href="#" target="_blank">Conference Name (Year)</a>
@@ -203,7 +203,7 @@
             </p>
             <ul class="text">
                 <li><strong>Binary Verifiability</strong>: Converting subjective interpretations into verifiable True/False judgments.</li>
-                <li><strong>Deterministic Rewards</strong>: Clear reward signals ($r=1$ for correct, $r=0$ for incorrect).</li>
+                <li><strong>Deterministic Rewards</strong>: Clear reward signals (\(r=1\) for correct, \(r=0\) for incorrect).</li>
                 <li><strong>Forced Reasoning</strong>: Requiring explicit Chain-of-Thought (CoT) reasoning within <code>&lt;think&gt;...&lt;/think&gt;</code> tags.</li>
             </ul>
         </div>
@@ -221,7 +221,7 @@
             <ul class="text">
                 <li><strong>Knowledge Density (⭐⭐⭐)</strong>: 5-10 distinct propositions per image provide dense supervision.</li>
                 <li><strong>Learnability (⭐⭐⭐)</strong>: Binary outcomes create clear gradient signals and reduce search space.</li>
-                <li><strong>Verifiability (⭐⭐⭐)</strong>: Definitive True/False answers eliminate ambiguity and enable objective reward calculation ($r=1$ or $r=0$), which is critical for RL stability.</li>
+                <li><strong>Verifiability (⭐⭐⭐)</strong>: Definitive True/False answers eliminate ambiguity and enable objective reward calculation (\(r=1\) or \(r=0\)), which is critical for RL stability.</li>
             </ul>
 
             <h3 class="text">2. TFQ-Data & TFQ-Bench</h3>
@@ -269,11 +269,12 @@
             </p>
             <p class="text">
                 <strong>Multi-Component Reward Function</strong>:
-                $$R_{\text{total}} = R_{\text{accuracy}} + \lambda_{\text{format}} \cdot R_{\text{format}}$$
+                <br>
+                <span style="display:block; text-align:center;">\[R_{\text{total}} = R_{\text{accuracy}} + \lambda_{\text{format}} \cdot R_{\text{format}}\]</span>
                 Correctness is rewarded based on the binary answer, while format rewards ensure structural compliance.
             </p>
             <p class="text">
-                <strong>Group Relative Optimization</strong>: We sample $K$ diverse outputs for each question and optimize the policy based on the relative advantage of each output compared to the group average.
+                <strong>Group Relative Optimization</strong>: We sample \(K\) diverse outputs for each question and optimize the policy based on the relative advantage of each output compared to the group average.
             </p>
         </div>
 
