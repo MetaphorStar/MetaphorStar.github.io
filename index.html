@@ -194,16 +194,31 @@
             <h1 class="text">Motivation</h1>
             <p class="text">
                 Understanding visual metaphors requires complex cognitive chains: 
-                <code>Visual Elements → Symbolic Recognition → Metaphorical Mapping → Cultural Context → Deep Implication</code>.
+            </p>
+
+            <!-- 渲染为流程图 -->
+            <div class="mermaid" style="text-align: center; margin: 20px auto;">
+                graph LR
+                    A(Visual Elements) --> B(Symbolic Recognition)
+                    B --> C(Metaphorical Mapping)
+                    C --> D(Cultural Context)
+                    D --> E(Deep Implication)
+                    style A fill:#e1f5fe,stroke:#01579b,stroke-width:2px,rx:10,ry:10,color:#000
+                    style B fill:#e0f2f1,stroke:#004d40,stroke-width:2px,rx:10,ry:10,color:#000
+                    style C fill:#fff3e0,stroke:#e65100,stroke-width:2px,rx:10,ry:10,color:#000
+                    style D fill:#f3e5f5,stroke:#4a148c,stroke-width:2px,rx:10,ry:10,color:#000
+                    style E fill:#ffebee,stroke:#b71c1c,stroke-width:4px,rx:10,ry:10,color:#000
+            </div>
+
+            <p class="text">
                 Standard Supervised Fine-Tuning (SFT) is insufficient for teaching this process.
             </p>
             <p class="text">
                 We leverage <strong>Reinforcement Learning (RL)</strong> to optimize the reasoning process itself. However, applying RL to subjective visual interpretation is challenging due to the lack of "ground truth".
-                We solve this with the <strong>True-False Question (TFQ) Paradigm</strong>:
+                We solve this with the <strong>True-False Question (TFQ) Paradigm</strong>, which decomposes the single complex image metaphor problem into multiple rich TFQs across different levels:
             </p>
             <ul class="text">
-                <li><strong>Binary Verifiability</strong>: Converting subjective interpretations into verifiable True/False judgments.</li>
-                <li><strong>Deterministic Rewards</strong>: Clear reward signals (\(r=1\) for correct, \(r=0\) for incorrect).</li>
+                <li><strong>Verifiable Binary Feedback</strong>: Converting subjective interpretations into verifiable True/False judgments with clear reward signals (\(r=1\) for correct, \(r=0\) for incorrect), enabling stable RL optimization.</li>
                 <li><strong>Forced Reasoning</strong>: Requiring explicit Chain-of-Thought (CoT) reasoning within <code>&lt;think&gt;...&lt;/think&gt;</code> tags.</li>
             </ul>
         </div>
@@ -343,7 +358,7 @@
                 <strong>State-of-the-Art Performance:</strong> MetaphorStar-32B achieves SOTA on all major benchmarks.
             </p>
             <ul class="text">
-                <li><strong>TFQ:</strong> We outperform Gemini-3.0-Pro, demonstrating superior discriminative visual reasoning.</li>
+                <li><strong>TFQ:</strong> We outperform Gemini-3.0-Pro, demonstrating superior discriminative visual reasoning. <strong>(TFQ evaluation uses a strict "all-or-nothing" metric: a sample is correct only if ALL questions for the image, e.g., 10/10, are answered correctly.)</strong></li>
                 <li><strong>MCQ:</strong> Our model surpasses open-source models and rivals closed-source giants.</li>
                 <li><strong>OSQ:</strong> The rich reasoning patterns learned via RL transfer directly to generation tasks, producing deeper and more culturally aware interpretations.</li>
             </ul>
