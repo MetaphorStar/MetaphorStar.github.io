@@ -1450,3 +1450,104 @@ iframe {
     color: #222;
     font-size: 1em;
 }
+
+.bibtex-wrapper {
+    position: relative;
+}
+
+.bibtex-wrapper .bibtex {
+    margin: 0;
+    padding: 1.5em;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    font-size: 0.85em;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.copy-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    color: #333;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.copy-button:hover {
+    background: #f0f0f0;
+}
+
+.citation-plain {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* KaTeX renders \text{} as span.text, which must not inherit the paragraph-level .text layout. */
+.katex .text {
+    width: auto;
+    margin: 0;
+    font-size: inherit;
+}
+
+/* Figures carry intrinsic width/height attributes to reserve space before loading. */
+d-figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+.button-container a.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    margin: 0;
+}
+
+.btn-icon {
+    width: auto;
+    height: 1.1em;
+    flex-shrink: 0;
+}
+
+.flow-chain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 8px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.flow-node {
+    padding: 8px 14px;
+    border: 2px solid;
+    border-radius: 10px;
+    color: #000;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    /* Override inline nowrap on the subtitle so it does not overflow narrow screens. */
+    .header-content h2 span {
+        white-space: normal !important;
+    }
+}
+
+.flow-node-final {
+    border-width: 4px;
+    font-weight: bold;
+}
+
+.flow-arrow {
+    color: #555;
+    font-size: 1.3em;
+    line-height: 1;
+}

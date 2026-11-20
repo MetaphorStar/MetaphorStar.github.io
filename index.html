@@ -6,49 +6,69 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MetaphorStar is the first end-to-end visual reinforcement learning framework for image implication understanding, with the TFQ-Data dataset, the TFQ-GRPO method, and the TFQ-Bench benchmark.">
+    <link rel="canonical" href="https://metaphorstar.github.io/">
+
+    <!-- Google Scholar (Highwire Press) tags; must match the arXiv record exactly. -->
+    <meta name="citation_title" content="MetaphorStar: Image Metaphor Understanding and Reasoning with End-to-End Visual Reinforcement Learning">
+    <meta name="citation_author" content="Zhang, Chenhao">
+    <meta name="citation_author" content="Niu, Yazhe">
+    <meta name="citation_author" content="Li, Hongsheng">
+    <meta name="citation_publication_date" content="2026/02/11">
+    <meta name="citation_online_date" content="2026/02/11">
+    <meta name="citation_arxiv_id" content="2602.10575">
+    <meta name="citation_abstract_html_url" content="https://arxiv.org/abs/2602.10575">
+    <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2602.10575">
+    <meta name="citation_language" content="en">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "headline": "MetaphorStar: Image Metaphor Understanding and Reasoning with End-to-End Visual Reinforcement Learning",
+        "name": "MetaphorStar: Image Metaphor Understanding and Reasoning with End-to-End Visual Reinforcement Learning",
+        "author": [
+            {"@type": "Person", "name": "Chenhao Zhang"},
+            {"@type": "Person", "name": "Yazhe Niu"},
+            {"@type": "Person", "name": "Hongsheng Li"}
+        ],
+        "datePublished": "2026-02-11",
+        "url": "https://metaphorstar.github.io/",
+        "sameAs": "https://arxiv.org/abs/2602.10575",
+        "identifier": "arXiv:2602.10575",
+        "image": "https://metaphorstar.github.io/assets/og_image.jpg"
+    }
+    </script>
 
     <!-- Open Graph -->
     <meta property="og:url" content="https://metaphorstar.github.io/" />
-    <meta property="og:image" content="./assets/Teaser.jpg" />
+    <meta property="og:image" content="https://metaphorstar.github.io/assets/og_image.jpg" />
     <meta property="og:title" content="MetaphorStar: Image Metaphor Understanding and Reasoning with Visual RL" />
     <meta property="og:description" content="MetaphorStar is the first end-to-end visual reinforcement learning framework for image implication understanding, achieving SOTA performance." />
 
     <!-- Twitter -->
     <meta name="twitter:url" content="https://metaphorstar.github.io/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="./assets/Teaser.jpg" />
+    <meta name="twitter:image" content="https://metaphorstar.github.io/assets/og_image.jpg" />
     <meta name="twitter:title" content="MetaphorStar: Image Metaphor Understanding and Reasoning with Visual RL" />
     <meta name="twitter:description" content="MetaphorStar is the first end-to-end visual reinforcement learning framework for image implication understanding, achieving SOTA performance." />
 
+    <!-- All assets are self-hosted: third-party CDNs are slow or blocked in some regions. -->
+    <link rel="preload" as="image" href="./assets/Teaser_new.webp" fetchpriority="high">
+    <!-- distill injects its own <style> on execution; style.css must come after it to override. -->
     <script src="./static/js/distill_template.v2.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://d3js.org/d3-collection.v1.min.js"></script>
-    <script src="https://rawgit.com/nstrayer/slid3r/master/dist/slid3r.js"></script>
-
-    <script defer="" src="./static/js/hider.js"></script>
-    <script src="./static/js/image_interact.js"></script>
-    <script src="./static/js/switch_videos.js"></script>
-
     <link rel="stylesheet" href="./static/css/style.css">
-    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-    <script defer src="./static/js/fontawesome.all.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="./static/katex/katex.min.css">
+    <script defer src="./static/katex/katex.min.js"></script>
+    <script defer src="./static/katex/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {
+        delimiters: [
+            {left: '\\[', right: '\\]', display: true},
+            {left: '\\(', right: '\\)', display: false}
+        ],
+        throwOnError: false
+    });"></script>
     <script defer src="./static/js/medium-zoom.min.js"></script>
     <script defer src="./static/js/zoom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.3.0/mermaid.min.js"></script>
-    <script>
-        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
-    </script>
 </head>
 <body>
     <div class="header-wrapper">
@@ -87,41 +107,29 @@
 
                 <div class="button-container" style="display: flex; flex-wrap: wrap; gap: 8px;">
                     <a href="https://arxiv.org/abs/2602.10575" class="button paper-link" target="_blank">
-                        <!-- Paper Link Placeholder -->
-                        <span class="icon is-small">
-                            <i class="ai ai-arxiv"></i>
-                        </span>
+                        <svg class="btn-icon" viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" transform="matrix(1.55,0,0,-1.55,-123.2,553.6)" d="m119.65 351.996c-5.85.135-11.194-3.299-13.502-8.676-2.196-5.27-.619-8.967 4.197-15.865 7.055-10.38 78.824-96.563 78.824-96.563l-15.883-14.863c-13.381-13.378-13.956-31.333-1.51-43.775l18.492-17.613-51.598-63.377c-4.006-4.268-6.485-11.756-4.248-17.131 2.278-5.536 7.697-9.129 13.684-9.07 3.834.096 7.433 1.874 9.838 4.861l61.369 57.057 94.576-90.07c3.194-3.084 7.443-4.84 11.883-4.91 1.604.004 3.198.245 4.732.715 5.779 1.806 10.249 6.418 11.871 12.252 1.3 5.474-.276 11.233-4.182 15.283l-83.086 100.012 14.879 13.834c11.096 10.003 11.154 27.391.127 37.469l-16.295 15.631 56.256 66.443.074.086.066.09c5.027 6.531 7.432 11.562 4.84 17.94-3.134 5.968-8.697 10.29-15.256 11.851-.677.091-1.359.136-2.043.137l-.004-.012c-4.429-.27-8.61-2.131-11.775-5.24l-.131-.107-.123-.111-65.207-59.127-89.897 86.24s-5.334 6.478-10.97 6.611zm178.104-33.041c.479-.002.957-.033 1.432-.096 4.843-1.333 8.956-4.54 11.432-8.91 1.449-3.562 1.003-6.457-4.197-13.215l-56.059-66.219-26.375 25.303 64.955 58.906c2.339 2.415 5.465 3.911 8.813 4.217v.014zM192.436 227.402l142.01-170.158c2.787-3.489 4.529-6.979 3.342-10.912-1.161-4.303-4.435-7.718-8.686-9.057-1.081-.334-2.205-.504-3.336-.506-3.208.076-6.27 1.356-8.576 3.588l-142.033 135.285c-11.172 11.172-9.482 26.02 1.393 36.895z"/></svg>
                         <span>arXiv</span>
                     </a>
                     <a href="https://github.com/MING-ZCH/MetaphorStar" class="button" target="_blank">
-                        <!-- Code Link Placeholder -->
-                        <span class="icon is-small">
-                            <i class="fab fa-github"></i>
-                        </span>
+                        <svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
                         <span>Code</span>
                     </a>
                     <a href="https://huggingface.co/collections/MING-ZCH/metaphorstar" class="button" target="_blank">
-                        <span class="icon is-small">
-                            <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face logo" style="height: 1em;">
-                        </span>
+                        <img class="btn-icon" src="./static/img/icons/hf-logo.svg" alt="" width="95" height="88">
                         <span>Models</span>
                     </a>
                     <a href="https://huggingface.co/collections/MING-ZCH/metaphorstar" class="button" target="_blank">
-                        <span class="icon is-small">
-                            <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face logo" style="height: 1em;">
-                        </span>
+                        <img class="btn-icon" src="./static/img/icons/hf-logo.svg" alt="" width="95" height="88">
                         <span>TFQ-Data</span>
                     </a>
                     <a href="https://huggingface.co/collections/MING-ZCH/metaphorstar" class="button" target="_blank">
-                        <span class="icon is-small">
-                            <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face logo" style="height: 1em;">
-                        </span>
+                        <img class="btn-icon" src="./static/img/icons/hf-logo.svg" alt="" width="95" height="88">
                         <span>TFQ-Bench</span>
                     </a>
                 </div>
             </div>
             <div class="header-image">
-                <img draggable="false" src="./assets/Teaser_new.webp" alt="MetaphorStar Teaser" class="teaser-image" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <img draggable="false" src="./assets/Teaser_new.webp" alt="MetaphorStar Teaser" class="teaser-image" width="1536" height="864" fetchpriority="high" decoding="async" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
             </div>
         </div>
     </div>
@@ -188,7 +196,7 @@
             </a>
         </div>
         <p class="click-hint" style="width: 85%;">
-            <img src="./static/img/icons/click.gif" style="width: 1.5rem">
+            <img src="./static/img/icons/click.gif" alt="" width="64" height="64" style="width: 1.5rem; height: auto;">
             <strong>Click to jump to each section.</strong>
         </p>
         <hr>
@@ -200,18 +208,16 @@
                 Understanding visual metaphors requires complex cognitive chains: 
             </p>
 
-            <!-- 渲染为流程图 -->
-            <div class="mermaid" style="text-align: center; margin: 20px auto;">
-                graph LR
-                    A(Visual Elements) --> B(Symbolic Recognition)
-                    B --> C(Metaphorical Mapping)
-                    C --> D(Cultural Context)
-                    D --> E(Deep Implication)
-                    style A fill:#e1f5fe,stroke:#01579b,stroke-width:2px,rx:10,ry:10,color:#000
-                    style B fill:#e0f2f1,stroke:#004d40,stroke-width:2px,rx:10,ry:10,color:#000
-                    style C fill:#fff3e0,stroke:#e65100,stroke-width:2px,rx:10,ry:10,color:#000
-                    style D fill:#f3e5f5,stroke:#4a148c,stroke-width:2px,rx:10,ry:10,color:#000
-                    style E fill:#ffebee,stroke:#b71c1c,stroke-width:4px,rx:10,ry:10,color:#000
+            <div class="flow-chain text" role="img" aria-label="Visual Elements, then Symbolic Recognition, then Metaphorical Mapping, then Cultural Context, then Deep Implication">
+                <span class="flow-node" style="background:#e1f5fe; border-color:#01579b;">Visual Elements</span>
+                <span class="flow-arrow">&rarr;</span>
+                <span class="flow-node" style="background:#e0f2f1; border-color:#004d40;">Symbolic Recognition</span>
+                <span class="flow-arrow">&rarr;</span>
+                <span class="flow-node" style="background:#fff3e0; border-color:#e65100;">Metaphorical Mapping</span>
+                <span class="flow-arrow">&rarr;</span>
+                <span class="flow-node" style="background:#f3e5f5; border-color:#4a148c;">Cultural Context</span>
+                <span class="flow-arrow">&rarr;</span>
+                <span class="flow-node flow-node-final" style="background:#ffebee; border-color:#b71c1c;">Deep Implication</span>
             </div>
 
             <p class="text">
@@ -258,7 +264,7 @@
             </p>
             <d-figure id="fig-data-bench">
                 <figure>
-                    <img data-zoomable="" draggable="false" src="./assets/TFQ_Data_Bench.png" alt="TFQ Data and Bench" style="width: 80%; display: block; margin: auto;">
+                    <img data-zoomable="" draggable="false" src="./assets/TFQ_Data_Bench.webp" width="722" height="187" loading="lazy" decoding="async" alt="TFQ Data and Bench" style="width: 80%; display: block; margin: auto;">
                     <figcaption>
                         <strong>Figure 1:</strong> Overview of TFQ-Data and TFQ-Bench splits. TFQ-Data-Full contains ~14k questions for training, while TFQ-Bench provides rigorous evaluation sets strictly disjoint from training data.
                     </figcaption>
@@ -338,7 +344,7 @@
             </p>
             <d-figure id="fig-token-entropy">
                 <figure>
-                    <img data-zoomable="" draggable="false" src="./assets/Visualization_of_token_entropy.jpg" alt="Token Entropy Visualization" style="width: 100%;">
+                    <img data-zoomable="" draggable="false" src="./assets/Visualization_of_token_entropy.webp" data-zoom-src="./assets/Visualization_of_token_entropy_full.webp" width="1800" height="1440" loading="lazy" decoding="async" alt="Token Entropy Visualization" style="width: 100%;">
                     <figcaption>
                         <strong>Figure 3:</strong> The visualization of token entropy for MetaphorStar-7B on TFQ, MCQ, and OSQ. High-entropy (red) indicates high uncertainty, while low-entropy (blue) indicates high confidence.
                     </figcaption>
@@ -368,7 +374,7 @@
             </ul>
             <d-figure id="fig-main-results">
                 <figure>
-                    <img data-zoomable="" draggable="false" src="./assets/Main_results.png" alt="Main Results">
+                    <img data-zoomable="" draggable="false" src="./assets/Main_results.webp" width="1486" height="1113" loading="lazy" decoding="async" alt="Main Results">
                     <figcaption>
                         <strong>Figure 2:</strong> Main performance comparison. MetaphorStar-32B outperforms Gemini-3.0-Pro on several metrics.
                     </figcaption>
@@ -383,7 +389,7 @@
             </p>
             <d-figure id="fig-general-results">
                 <figure>
-                    <img data-zoomable="" draggable="false" src="./assets/General_results.png" alt="General Results">
+                    <img data-zoomable="" draggable="false" src="./assets/General_results.webp" width="1524" height="914" loading="lazy" decoding="async" alt="General Results">
                     <figcaption>
                         <strong>Figure 4:</strong> Performance on general vision benchmarks.
                     </figcaption>
@@ -402,7 +408,7 @@
             </p>
             <d-figure id="fig-model-scaling">
                 <figure>
-                    <img data-zoomable="" draggable="false" src="./assets/Model_Scaling.png" alt="Model Scaling" style="width: 80%; display: block; margin: auto;">
+                    <img data-zoomable="" draggable="false" src="./assets/Model_Scaling.webp" width="947" height="393" loading="lazy" decoding="async" alt="Model Scaling" style="width: 80%; display: block; margin: auto;">
                     <figcaption>
                         <strong>Figure 5: Model Parameter Scaling.</strong> We observed consistent performance gains scaling from 3B to 32B. Larger models benefit more significantly from the RL stage.
                     </figcaption>
@@ -414,7 +420,7 @@
             </p>
             <d-figure id="fig-data-scaling">
                 <figure>
-                    <img data-zoomable="" draggable="false" src="./assets/Data_Scaling.png" alt="Data Scaling" style="width: 80%; display: block; margin: auto;">
+                    <img data-zoomable="" draggable="false" src="./assets/Data_Scaling.webp" width="568" height="193" loading="lazy" decoding="async" alt="Data Scaling" style="width: 80%; display: block; margin: auto;">
                     <figcaption>
                         <strong>Figure 6: Data Training Scaling.</strong> Scaling TFQ-Data from 1k to 14k samples shows a log-linear improvement in reasoning accuracy.
                     </figcaption>
@@ -427,7 +433,7 @@
             </p>
             <d-figure id="fig-arch-study">
                 <figure>
-                    <img data-zoomable="" draggable="false" src="./assets/Different_Architecture.png" alt="Different Architecture" style="width: 80%; display: block; margin: auto;">
+                    <img data-zoomable="" draggable="false" src="./assets/Different_Architecture.webp" width="605" height="217" loading="lazy" decoding="async" alt="Different Architecture" style="width: 80%; display: block; margin: auto;">
                     <figcaption><strong>Figure 7:</strong> Ablation on Different Model Architectures.</figcaption>
                 </figure>
             </d-figure>
@@ -440,7 +446,7 @@
             </p>
             <d-figure id="fig-train-strategy">
                 <figure>
-                    <img data-zoomable="" draggable="false" src="./assets/Different_Training_Strategy.png" alt="Different Training Strategy" style="width: 80%; display: block; margin: auto;">
+                    <img data-zoomable="" draggable="false" src="./assets/Different_Training_Strategy.webp" width="734" height="231" loading="lazy" decoding="async" alt="Different Training Strategy" style="width: 80%; display: block; margin: auto;">
                     <figcaption><strong>Figure 8:</strong> Comparison of Different Training Strategies.</figcaption>
                 </figure>
             </d-figure>
@@ -479,14 +485,19 @@
         <!-- Citation -->
         <div class="sub-section">
             <h1 class="text">Citation</h1>
-            <pre class="bibtex">
-@article{zhang2026metaphorstar,
-  title={MetaphorStar: Image Metaphor Understanding and Reasoning with End-to-End Visual Reinforcement Learning}, 
-  author={Chenhao Zhang, Yazhe Niu and Hongsheng Li},
-  journal={arXiv preprint arXiv:2602.10575},
-  year={2026}
-}
-            </pre>
+            <p class="text">If you find our work helpful, please consider citing:</p>
+            <div class="text bibtex-wrapper">
+                <button class="copy-button" type="button" onclick="copyBibtex(this)">Copy</button>
+<pre class="bibtex" id="bibtex">@article{zhang2026metaphorstar,
+  title   = {{MetaphorStar}: Image Metaphor Understanding and Reasoning with End-to-End Visual Reinforcement Learning},
+  author  = {Zhang, Chenhao and Niu, Yazhe and Li, Hongsheng},
+  journal = {arXiv preprint arXiv:2602.10575},
+  year    = {2026}
+}</pre>
+            </div>
+            <p class="text citation-plain">
+                Chenhao Zhang, Yazhe Niu, and Hongsheng Li. MetaphorStar: Image Metaphor Understanding and Reasoning with End-to-End Visual Reinforcement Learning. <em>arXiv preprint arXiv:2602.10575</em>, 2026.
+            </p>
         </div>
 
         <p style="text-align: center; font-size: small; color: gray; margin-top: 50px; white-space: nowrap;">
@@ -494,5 +505,13 @@
         </p>
 
     </d-article>
+    <script>
+        function copyBibtex(button) {
+            navigator.clipboard.writeText(document.getElementById('bibtex').textContent).then(function () {
+                button.textContent = 'Copied!';
+                setTimeout(function () { button.textContent = 'Copy'; }, 1500);
+            });
+        }
+    </script>
 </body>
 </html>

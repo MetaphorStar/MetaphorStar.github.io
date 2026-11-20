@@ -4,13 +4,13 @@
 
 **Image Metaphor Understanding and Reasoning with End-to-End Visual Reinforcement Learning**
 
-[![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
+[![arXiv](https://img.shields.io/badge/arXiv-2602.10575-b31b1b.svg)](https://arxiv.org/abs/2602.10575)
 [![HuggingFace Models](https://img.shields.io/badge/🤗%20HuggingFace-Models-yellow)](https://huggingface.co/collections/MING-ZCH/metaphorstar)
 [![Dataset](https://img.shields.io/badge/🤗%20HuggingFace-Dataset-green)](https://huggingface.co/collections/MING-ZCH/metaphorstar)
 [![Benchmark](https://img.shields.io/badge/🤗%20HuggingFace-Benchmark-orange)](https://huggingface.co/collections/MING-ZCH/metaphorstar)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-[Paper](#) | [Models](https://huggingface.co/collections/MING-ZCH/metaphorstar) | [Dataset](https://huggingface.co/collections/MING-ZCH/metaphorstar) | [Benchmark](https://huggingface.co/collections/MING-ZCH/metaphorstar)
+[Paper](https://arxiv.org/abs/2602.10575) | [Models](https://huggingface.co/collections/MING-ZCH/metaphorstar) | [Dataset](https://huggingface.co/collections/MING-ZCH/metaphorstar) | [Benchmark](https://huggingface.co/collections/MING-ZCH/metaphorstar)
 
 </div>
 
@@ -340,10 +340,10 @@ If you find our work helpful in your research, please cite the following paper:
 
 ```bibtex
 @article{zhang2026metaphorstar,
-  title={MetaphorStar: Image Metaphor Understanding and Reasoning with End-to-End Visual Reinforcement Learning}, 
-  author={Chenhao Zhang, Yazhe Niu and Hongsheng Li},
-  journal={arXiv preprint arXiv:xxx},
-  year={2026}
+  title   = {{MetaphorStar}: Image Metaphor Understanding and Reasoning with End-to-End Visual Reinforcement Learning},
+  author  = {Zhang, Chenhao and Niu, Yazhe and Li, Hongsheng},
+  journal = {arXiv preprint arXiv:2602.10575},
+  year    = {2026}
 }
 ```
 

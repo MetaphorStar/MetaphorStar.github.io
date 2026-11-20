@@ -1,8 +1,5 @@
-// Initialize medium zoom.
-// note: $ = jquery
-$(document).ready(function() {
-    medium_zoom = mediumZoom('[data-zoomable]', {
-        margin: 100,
-        background: '#ffffffee',
-    })
+// Initialize medium zoom (loaded with defer, so the DOM is already parsed).
+mediumZoom('[data-zoomable]', {
+    margin: 100,
+    background: '#ffffffee',
 });
